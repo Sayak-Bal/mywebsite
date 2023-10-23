@@ -1,0 +1,33 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(20, 20, 77);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: solid 1px rgb(193, 193, 193);
+    z-index: 99;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.15s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(173, 38, 173);
+}
