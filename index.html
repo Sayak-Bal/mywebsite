@@ -14,10 +14,24 @@
             padding: 0;
         }
 
+        /*:root{    
+          --primary-color:#edf2fc;
+            --secondary-color: #32212121;
+        }
+        .dark-theme{
+        --primary-color:#000106;
+            --secondary-color:#fff;
+        }*/
         body {
             background-color: rgb(0, 0, 33);
             color: white;
             font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            top: 0%;
+            position: fixed;
+
         }
 
         nav {
@@ -25,17 +39,27 @@
             justify-content: space-around;
             align-items: center;
             height: 80px;
+            width: 100vw;
             background-color: rgb(20, 20, 77);
+
+
         }
 
         nav ul {
             display: flex;
             justify-content: center;
+
+        }
+
+        #icon {
+            width: 30px;
+            cursor: pointer;
         }
 
         nav ul li {
             list-style: none;
             margin: 0 23px;
+
 
         }
 
@@ -63,6 +87,7 @@
             margin: 120px 0;
 
 
+
         }
 
         .firstSection>div {
@@ -76,31 +101,44 @@
             font-size: 3rem;
 
 
+
         }
-        .leftSection .buttons{
-            padding:50px 0;
+
+        .leftSection .buttons {
+            padding: 50px 0;
         }
-        .leftSection .btn{
-            padding:12px;
-            background-color:#1e2167;
-            color:white;
+
+        .leftSection .btn {
+            padding: 12px;
+            background-color: #1e2167;
+            color: white;
             border: 2px solid white;
-            border-radius:6px;
-            font-size:20px;
-            cursor:pointer;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
         }
-            .leftSection .btn:hover {
+
+        .btn a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        .leftSection .btn:hover {
 
             background-color: rgb(116, 77, 116);
             font-size: 1.4rem;
 
-}
 
         }
 
+
+
         .rightSection img {
-            width: 80%;
-            margin: 50px;
+            width: 30vw;
+            margin: 10px;
+            height: 50%;
+
         }
 
         .purple {
@@ -168,9 +206,37 @@
             color: gray;
         }
 
+        .thirdSection {
+            height: 80vh;
+            width: 80vw;
+            margin: auto;
+            font-size: 20px;
+
+        }
+
+        .box2 {
+            display: flex;
+            margin: 30px;
+
+        }
+
+        .box2 .about-img {
+            height: 2px;
+
+        }
+
+        .box2 .about-text {
+            justify-content: space-around;
+            font-size: 20px;
+            margin: 30px;
+            height: 30rem;
+            padding: 1em;
+
+        }
+
         footer {
             background-color: #0e0e1a;
-        
+
 
         }
 
@@ -179,17 +245,20 @@
             padding: 23px 122px;
             justify-content: space-evenly;
         }
-        .footer ul{
-            list-style:none;
+
+        .footer ul {
+            list-style: none;
 
         }
-        .footer >div{
-            width:223px;
+
+        .footer>div {
+            width: 223px;
         }
-        footer .footer-rights{
-            text-align:center;
-            color:grey;
-            padding:12px 0;
+
+        footer .footer-rights {
+            text-align: center;
+            color: grey;
+            padding: 12px 0;
         }
     </style>
 </head>
@@ -200,27 +269,29 @@
             <div class="left">Sayak's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="/">Services</a></li>
                     <li> <a href="/">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <img src="moon.png" id="icon">
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <section class="firstSection">
+        <section class="firstSection" id="home">
             <div class="leftSection">Hi,My name is <span class="purple">Sayak</span>
 
                 <div>and I am passionate</div>
                 <span id="element"></span>
                 <div class="buttons">
-                <button class="btn">Download Resume</button>
-                <button class="btn">Visti Github</button>
+                    <button class="btn"><a href="Resume.pdf">Download Resume</a></button>
+
+                    <button class="btn"><a href="https://github.com/Sayak-Bal">Visti Github</a></button>
+                </div>
             </div>
-            </div>
-            <div class="rightSection"><img src="dev.png" alt=""></div>
+            <div class="rightSection"><img src="b.png" alt=""></div>
         </section>
 
         <hr>
@@ -303,10 +374,34 @@
                 </div>
 
             </div>
+        </section>
+        <hr>
+        <section id="about" class="thirdSection">
+            <span class="text-gray">Know more me</span>
+            <h1>About</h1>
+            <div class="box2">
+                <div class="about-img"><img src="about.webp" alt=""></img></div>
+                <div class="about-text">
+                    <P></P>Greetings! I'm Sayak Bal,
+                    a passionate web developer with a knack for crafting dynamic
+                    and interactive online experiences.
 
+                    Armed with a solid foundation in HTML, CSS, and JavaScript,
+                    I excel at transforming concepts into functional, user-friendly websites.
 
+                    My journey in web development commenced during my first year in college, and
+                    since then, I've been fortunate to contribute to a diverse range of projects.
+                    From designing responsive layouts to fine-tuning performance, I'm dedicated to delivering solutions
+                    that consistently surpass expectations.
+                    In addition to front-end development, I'm well-versed in back-end technologies such as Node.js and
+                    Python.
+                    This proficiency enables me to construct robust, scalable applications adept at managing complex
+                    data and ensuring seamless user interactions.
+                </div>
+            </div>
         </section>
     </main>
+    <hr>
     <footer>
         <div class="footer">
             <div class="footer-first">
@@ -330,17 +425,19 @@
             </div>
             <div class="foorter-fourth">
                 <ul>
-                    <li>home</li>
-                    <li>about</li>
-                    <li>services</li>
-                    <li>Contact me</li>
+                    <li id="contact">
+                        <h2>Contact me</h2>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/sayak-bal-100818254">Linkedin</li></a>
+                    <li>Email id-sayakbal002@gmail.com</li>
+                    <li><a href="https://www.youtube.com/@oneclicktrip360">youtube</a></li>
                 </ul>
             </div>
-         </div>
-            <div class="footer-rights">
-                Copyright &#169 sayakbalportfolio.com |All rights reserved 
-            </div>
-        
+        </div>
+        <div class="footer-rights">
+            Copyright &#169 sayakbalportfolio.com |All rights reserved
+        </div>
+
     </footer>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <!-- Setup and start animation! -->
@@ -349,6 +446,7 @@
             strings: ['Web Developer', 'Graphic Designer', "web Disinger", "Video Editor"],
             typeSpeed: 50,
         });
+
     </script>
 </body>
 </body>
